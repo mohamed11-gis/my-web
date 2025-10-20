@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday JOJO!</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<style>
+body {
+  margin:0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffe0f0, #ffd1b3);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+  min-height:100vh;
+  color:#333;
+  padding:20px;
+  overflow-x:hidden;
+  position:relative;
+}
+
+/* Animated background gradient */
+@keyframes bgGradient {
+  0% {background: linear-gradient(135deg, #ffe0f0, #ffd1b3);}
+  50% {background: linear-gradient(135deg, #ffdfc9, #ffb3c1);}
+  100% {background: linear-gradient(135deg, #ffe0f0, #ffd1b3);}
+}
+body { animation: bgGradient 15s ease infinite; }
+
+/* Confetti animation */
+@keyframes confettiFall {
+  0% { transform: translateY(-10px) rotate(0deg); opacity:1; }
+  100% { transform: translateY(100vh) rotate(360deg); opacity:0; }
+}
+.confetti {
+  position:absolute;
+  width:10px;
+  height:10px;
+  background-color:#ff2e63;
+  top:-10px;
+  left:50%;
+  animation: confettiFall 4s linear infinite;
+  opacity:0.8;
+  border-radius:50%;
+}
+
+/* Balloons */
+@keyframes balloonRise {
+  0% { transform: translateY(100vh) rotate(0deg);}
+  100% { transform: translateY(-200px) rotate(360deg);}
+}
+.balloon {
+  position:absolute;
+  width:40px; height:60px;
+  background-color:red;
+  border-radius:50% 50% 50% 50% / 60% 60% 40% 40%;
+  bottom:-60px;
+  animation: balloonRise linear infinite;
+}
+
+/* Title */
+h1 {
+  margin-top:20px;
+  font-size:3rem;
+  color:#ff2e63;
+  text-shadow: 2px 2px 10px #fff;
+  text-align:center;
+}
+
+/* Image container (grid) */
+.image-gallery {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
+  margin-top:30px;
+}
+
+.image-gallery img {
+  width:200px;
+  height:200px;
+  object-fit:cover;
+  border-radius:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  cursor:pointer;
+  border:3px solid #fff8;
+}
+
+.image-gallery img:hover {
+  transform: scale(1.12) rotate(5deg);
+  box-shadow:0 25px 50px rgba(0,0,0,0.6);
+  border-color:#ff2e63;
+}
+
+/* Audio container */
+.audio-container {
+  margin-top:40px;
+  background: rgba(255,255,255,0.2);
+  padding:10px 20px;
+  border-radius:20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Footer */
+footer {
+  margin-top:20px;
+  font-size:1rem;
+  color:#555;
+}
+</style>
+</head>
+<body>
+
+<h1>Happy Birthday, JOJO! 🎉</h1>
+
+<h2 style="margin-top:40px; text-align:center; color:#ff2e63;">Birthday Video</h2>
+
+<div class="video-container" style="display:flex; justify-content:center; margin-bottom:30px;">
+  <video width="320" height="240" controls autoplay loop muted style="border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.3);">
+    <source src="jojo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+<div class="image-gallery">
+  <img src="jo1.jpg" alt="Birthday Pic 1">
+  <img src="jo2.jpg" alt="Birthday Pic 2">
+  <img src="jo3.jpg" alt="Birthday Pic 3">
+  <img src="jo4.jpg" alt="Birthday Pic 4">
+  <img src="jo5.jpg" alt="Birthday Pic 5">
+  <img src="jo6.jpg" alt="Birthday Pic 6">
+  <img src="jo7.jpg" alt="Birthday Pic 7">
+  <img src="jo8.jpg" alt="Birthday Pic 8">
+  <img src="jo9.jpg" alt="Birthday Pic 9">
+  <img src="jo10.jpg" alt="Birthday Pic 10">
+  <img src="jo11.jpg" alt="Birthday Pic 11">
+  <img src="jo12.jpg" alt="Birthday Pic 12">
+  <img src="jo13.jpg" alt="Birthday Pic 13">
+  <img src="jo14.jpg" alt="Birthday Pic 14">
+  <img src="jo15.jpg" alt="Birthday Pic 15">
+  <img src="jo16.jpg" alt="Birthday Pic 16">
+  <img src="jo17.jpg" alt="Birthday Pic 17">
+  <img src="jo18.jpg" alt="Birthday Pic 18">
+  <img src="jo19.jpg" alt="Birthday Pic 19">
+  <img src="jo20.jpg" alt="Birthday Pic 20">
+  <img src="jo21.jpg" alt="Birthday Pic 21">
+</div>
+<!-- Add this after the image gallery and before the audio-container -->
+
+<h2 style="margin-top:40px; text-align:center; color:#ff2e63;">Family Messages</h2>
+
+<div class="message-table-container">
+  <table class="message-table">
+    <thead>
+      <tr>
+        <th>Family Member</th>
+        <th>Message</th>
+        <th>Audio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Mom</td>
+        <td contenteditable="true">Happy Birthday Mom! 🎉</td>
+        <td>
+        <audio controls>
+          <source src="mamaaa.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </td>
+      </tr>
+      <tr>
+        <td>Dad</td>
+        <td contenteditable="true">Happy Birthday Dad! 🎉</td>
+        <td>
+        <audio controls>
+          <source src="baba.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </td>
+      </tr>
+      <tr>
+        <td>Brother</td>
+        <td contenteditable="true">Happy Birthday to you ya jojo w bhbhk ya ahla o5t f el donya kolha w rbna y5lyky lya w tfdly dymn gnby </td>
+        <td>
+        <audio controls>
+          <source src="youssef.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </td>
+      </tr>
+      <tr>
+        <td>khalto shahndaa</td>
+        <td contenteditable="true">ربنا يبارك فيها ويحفظها ويخليها لينا
+حبيبتي كبرت وبقت زي القمر ما شاء الله عليها
+الصور فيها كميه ذكريات وحلاوه تجنن
+اتبسط اوي ان شوفتك يا وائل في الصور 
+ربنا يخليك ليهم ويبارك في عمرك
+الجروب كله حاجات حلوه والناس ال فيه احلي❤❤
+
+كل سنه وانتي طيبه يا حبيبه خالتو يا اجمل جوجو في الدنيا ربنا يحفظك ويبارك فيكي وتفضلي دلوعه العيله كلها كده يارب ❤بحبك اوي يا قلب شوشو😘🥳</td>
+<td>
+        <audio controls>
+          <source src="mom-message.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </td>
+      </tr>
+
+       <tr>
+        <td> Ana DODO</td>
+        <td contenteditable="true">ماشاء الله ربنا يحفظها ويبارك فيها
+حلوه وزي الفمر ربنا يحرسها الجروب فعلا كله صورحلوه وذكريات احلي
+ربنا يحفظك ياواءل ويبارك فيك ويخليك لهم ويعطيك الصحه والعافيه
+ودينا عشره العمر ربنا يارك فيكي وفي ملك ومريم وتشوفيهم اسعد الناس
+ربنا يبارك فيكم كلكم ويسعدكم ويجمعنا ديما علي خير
+كل سنه وانتي طيبه حبيبه قلب نانا</td>
+<td>
+        <audio controls>
+          <source src="mom-message.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </td>
+      </tr>
+       <tr>
+        <td>Nanosaa</td>
+        <td contenteditable="true">ما شاء الله ربنا يحفظها ويحميها ويفرح قلوبنا بيها دايما يارب الصور كلها حلوة اوى ما شاء الله كل سنة وانتى طيبة يا حبيبت خالتو وبخير عقبال مليون سنه وتحققى كل لتتمنيه ❤😍</td>
+        <td>
+        <audio controls>
+          <source src="mom-message.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </td>
+      </tr>
+       <tr>
+        <td>Mernaa</td>
+        <td contenteditable="true">Happy birthday ya jojoo❤❤ kol sana w enty tayeba w ya rab 3alatool mfarfesha a3adatna 
+May all your wishes come true ya habebti❤</td>
+<<td>
+        <audio controls>
+          <source src="mom-message.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </td>
+      </tr>
+
+      <tr>
+        <td>Ranaaa</td>
+        <td contenteditable="true">Happy birthday to my beautiful girl ♥ كل سنه وانتي طيبه يا حبيبه خالتو   Love you more than you imagine 💋💋🥳🤩🎈🎂🍭
+</td>
+<td>
+        <audio controls>
+          <source src="rana.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </td>
+      </tr>
+
+      <tr>
+        <td>amto</td>
+        <td contenteditable="true">Happy Birthday ya rohyy! 🎉</td><td>
+        <audio controls>
+          <source src="amto.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </td>
+      </tr>
+
+      <tr>
+        <td>Mariam</td>
+        <td contenteditable="true">Happy Birthday ya rohyy! 🎉</td><td>
+        <audio controls>
+          <source src="mariam.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </td>
+      </tr>
+
+      <tr>
+        <td>Malak</td>
+        <td contenteditable="true">Happy Birthday ya jojaaa 🎉</td><td>
+        <audio controls>
+          <source src="malak.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </td>
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
+
+<style>
+/* Family messages table styling */
+.message-table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+.message-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  margin: auto;
+}
+
+.message-table th, .message-table td {
+  border: 2px solid #ff2e63;
+  padding: 12px 16px;
+  text-align: left;
+}
+
+.message-table th {
+  background: #ff2e63;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+}
+
+.message-table td {
+  background: rgba(255,46,99,0.1);
+}
+
+.message-table td[contenteditable="true"] {
+  cursor: text;
+  transition: background 0.3s ease;
+}
+
+.message-table td[contenteditable="true"]:focus {
+  background: rgba(255,46,99,0.3);
+  outline: none;
+}
+</style>
+
+
+<div class="audio-container">
+  <audio id="birthdayAudio" autoplay loop>
+    <source src="happy-birthday-334876.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
+<footer>Made with love ❤️ by yoyo 😊</footer>
+
+<script>
+// Confetti
+for(let i=0;i<50;i++){
+  let c = document.createElement('div');
+  c.className='confetti';
+  c.style.left=Math.random()*100+'%';
+  c.style.backgroundColor = `hsl(${Math.random()*360},80%,60%)`;
+  c.style.animationDuration = (2+Math.random()*3)+'s';
+  c.style.width = c.style.height = (5+Math.random()*10)+'px';
+  document.body.appendChild(c);
+}
+
+// Balloons
+for(let i=0;i<8;i++){
+  let b = document.createElement('div');
+  b.className='balloon';
+  b.style.left = Math.random()*90+'%';
+  b.style.backgroundColor = `hsl(${Math.random()*360},70%,60%)`;
+  b.style.animationDuration = (8+Math.random()*6)+'s';
+  document.body.appendChild(b);
+}
+
+// Music autoplay
+const audio = document.getElementById('birthdayAudio');
+window.addEventListener('load', ()=>{
+  const playPromise = audio.play();
+  if(playPromise !== undefined){
+    playPromise.catch(err=>{
+      const btn = document.createElement('button');
+      btn.innerText='Play Birthday Song 🎵';
+      btn.style.position='fixed';
+      btn.style.bottom='20px';
+      btn.style.left='50%';
+      btn.style.transform='translateX(-50%)';
+      btn.style.padding='10px 20px';
+      btn.style.fontSize='16px';
+      btn.style.borderRadius='12px';
+      btn.style.backgroundColor='#ff2e63';
+      btn.style.color='#fff';
+      btn.style.border='none';
+      btn.style.cursor='pointer';
+      document.body.appendChild(btn);
+      btn.addEventListener('click',()=>{
+        audio.play();
+        btn.remove();
+      });
+    });
+  }
+});
+</script>
+
+</body>
+</html>
